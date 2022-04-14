@@ -12,16 +12,16 @@ const Layout = () => {
                 <h2 className="text-4xl font-black text-center text-white">CRM - Clientes</h2>
                 <nav className = "mt-10">
                     <Link 
-                        className ={ `${urlActual === '/clientes' ? 'text-blue-700 font-bold '  :  'text-white' }  
-                            text-2xl block mt-2 hover:text-indigo-700`}
+                        className ={ `${urlActual === '/clientes' ? 'text-blue-400 font-bold '  :  'text-white' }  
+                            text-2xl block mt-2 hover:text-blue-800`}
                         to="/clientes">Clientes</Link>
                     <Link 
-                        className ={ `${urlActual === '/clientes/nuevo' ? 'text-blue-700 font-bold'  :  'text-white' }  
-                            text-2xl block mt-2 hover:text-indigo-700`}
+                        className ={ `${urlActual === '/clientes/nuevo' ? 'text-blue-400 font-bold'  :  'text-white' }  
+                            text-2xl block mt-2 hover:text-blue-800`}
                         to="/clientes/nuevo">Nuevo Cliente</Link>
                 </nav>
             </div>
-            <div className = "md:w-3/4">
+            <div className = "md:w-3/4 pl-10 m-4">
                 <Outlet/>
             </div>
         </div>

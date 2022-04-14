@@ -3,7 +3,7 @@ const Inicio = () => {
       
       return (
             <div>
-                  <h1 className ="text-center font-bold text-3xl m-4">Inicio</h1>  
+                  <h1 className =" font-black text-blue-600 text-4xl">Inicio</h1>  
             </div>
       )
 }
