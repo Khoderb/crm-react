@@ -15,6 +15,22 @@
       "telefono": "12123512",
       "notas": "Otra nota del cliente",
       "id": 2
+    },
+    {
+      "nombre": "Jorge mendez",
+      "empresa": "pavata",
+      "email": "jorge@jorge.com",
+      "telefono": "35341 1121 121",
+      "notas": "Es un cliente recomendado por otro cliente ",
+      "id": 3
+    },
+    {
+      "nombre": "Bernardo",
+      "empresa": "techUp S.AA",
+      "email": "berdaddario@gmail.com",
+      "telefono": "3546650023",
+      "notas": "",
+      "id": 4
     }
   ]
 }
