@@ -1,5 +1,20 @@
 {
   "clientes": [
-   
+    {
+      "nombre": "Bernardo",
+      "empresa": "Enginering S.A",
+      "email": "berdaddario@gmail.com",
+      "telefono": "3546650023",
+      "notas": "Una nota de devServices",
+      "id": 1
+    },
+    {
+      "nombre": "Drunvalo",
+      "empresa": "wan",
+      "email": "hola@correo.com",
+      "telefono": "12123512",
+      "notas": "Otra nota del cliente",
+      "id": 2
+    }
   ]
 }

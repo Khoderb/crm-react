@@ -27,7 +27,7 @@ const nuevoClienteSchema = Yup.object().shape({
 
 
 const handleSubmit = async (values)=> {
-        try     {   
+        try  {   
             const url = 'http://localhost:4000/clientes';
            const respuesta = await fetch(url,{
             method: 'POST',
