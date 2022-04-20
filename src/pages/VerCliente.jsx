@@ -9,7 +9,11 @@ const VerCliente = () => {
     const [cargando,setCargando ]= useState(true);
     const {id} = useParams();
 
-
+const handleTime=()=>{
+    setTimeout(() => {
+        setCargando(false);
+    }, 2000);
+}
 useEffect(() => {
     const consultarAPI = async () =>{
         try {
@@ -20,9 +24,7 @@ useEffect(() => {
         } catch (err) {
            console.log(err);
        }
-       setTimeout(() => {
-           setCargando(false);
-       }, 2000);
+    handleTime();
     }
     consultarAPI();
 },[])
@@ -55,7 +57,7 @@ return (
           <p className="font-black text-gray-600 text-3xl my-5 p-1">No hay resultados</p>
           <a className="font-bold  p-2 text-2xl text-blue-400 hover:text-blue-600" href="/clientes">Retornar</a>
         </>
-    }
+        }
     </>
          
     

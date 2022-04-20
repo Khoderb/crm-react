@@ -19,6 +19,22 @@ useEffect(() => {
       }
       getClientes()
 },[])
+      const handleEliminar = async id => {
+            const confirm = ('Quieres eliminar al Cliente?')
+            if(confirm){
+                  try {
+                        const url = `http://localhost:4000/clientes/${id}`;
+                        const respuesta = await fetch(url,{
+                              method: 'DELETE',
+                        });
+                              await respuesta.json()
+                              setClientes(clientes.filter(cliente => cliente.id !== id))
+                  } catch (error) {
+                        console.log(error);
+                  }
+                        
+                  }
+            }
       
       return (
             <div>
@@ -40,6 +56,7 @@ useEffect(() => {
                                                 <Cliente
                                                       key={cliente.id}
                                                       cliente={cliente}
+                                                      handleEliminar={handleEliminar}
                                                 />
                                           ))
                                     }

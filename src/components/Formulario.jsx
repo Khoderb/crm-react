@@ -28,19 +28,34 @@ const nuevoClienteSchema = Yup.object().shape({
 
 
 const handleSubmit = async (values)=> {
-        try  {   
+    try  {   
+        let respuesta;
+        //editando
+        if(cliente.id){
+            const url = `http://localhost:4000/clientes/${cliente.id}`;
+            respuesta = await fetch(url,{
+                method: 'PUT',
+                body: JSON.stringify(values),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            await respuesta.json();
+            navigate(`/clientes/${cliente.id}`);
+        }else {
+            // nuevo registro
             const url = 'http://localhost:4000/clientes';
-           const respuesta = await fetch(url,{
-            method: 'POST',
-            body: JSON.stringify(values),
-            headers: {
-            'Content-Type': 'application/json'
-            },
-        })   
-        
-        const resultado = await respuesta.json()
-        console.log(resultado);
-
+            
+            respuesta = await fetch(url,{
+                method: 'POST',
+                body: JSON.stringify(values),
+                headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+            await respuesta.json()
+            navigate('/clientes');   
+        }
     }catch (error) {
             console.log(error);
         }
