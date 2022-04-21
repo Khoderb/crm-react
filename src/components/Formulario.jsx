@@ -32,7 +32,7 @@ const handleSubmit = async (values)=> {
         let respuesta;
         //editando
         if(cliente.id){
-            const url = `http://localhost:4000/clientes/${cliente.id}`;
+            const url = `${import.meta.env.VITE_API_URL}/${cliente.id}`;
             respuesta = await fetch(url,{
                 method: 'PUT',
                 body: JSON.stringify(values),
@@ -44,7 +44,7 @@ const handleSubmit = async (values)=> {
             navigate(`/clientes/${cliente.id}`);
         }else {
             // nuevo registro
-            const url = 'http://localhost:4000/clientes';
+            const url = import.meta.env.VITE_API_URL
             
             respuesta = await fetch(url,{
                 method: 'POST',

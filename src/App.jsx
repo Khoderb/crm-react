@@ -8,6 +8,8 @@ import VerCliente from "./pages/VerCliente"
 
 
 const App = ()=>{
+
+    
     return (
             <BrowserRouter>
                 <Routes>
