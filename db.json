@@ -7,6 +7,14 @@
       "telefono": "3546650023",
       "notas": "LLamame",
       "id": 1
+    },
+    {
+      "nombre": "Jorge",
+      "empresa": "newYorkTimes",
+      "email": "email@email.cpm",
+      "telefono": "341341",
+      "notas": "esta nota es para el cliente",
+      "id": 2
     }
   ]
 }
